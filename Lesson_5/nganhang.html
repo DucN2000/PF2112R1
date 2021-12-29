@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let tien_gui = prompt("Nhập số tiền gửi tiết kiệm");
+    let lai_suat = prompt("Nhập lãi suất %");
+    let nam = prompt("Nhập số năm muốn vay");
+
+    let tien_lai = tien_gui * lai_suat/100;
+
+    let tien_phai_tra = parseInt(tien_gui) + parseInt(nam * tien_lai);
+    document.write("Số tiền phải trả là: " + tien_phai_tra + " VNĐ")
+</script>

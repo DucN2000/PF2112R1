@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Amount</h3>
+    <input type="number" id="num" placeholder="Nhập số tiền">
+    <h3>From Currency</h3>
+    <select name="" id="fromcur">
+        <option value="usd">USD</option>
+        <option value="eu">EURO</option>
+    </select>
+    <h3>To Currency</h3>
+    <select name="" id="tocur">
+        <option value="vnd">Viet Nam</option>
+    </select>
+    <button onclick="Conv()">Convert</button>
+    <br>
+    <h2>Result:</h2>
+    <div id="result"></div>
+</body>
+</html>
+
+<script>
+    function Conv() {
+        let money = document.getElementById("num").value;
+        let result = Number(money) * 23000;
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
