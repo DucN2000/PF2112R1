@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="year" placeholder="Nhập năm">
+    <button onclick="check()">Kiểm tra</button>
+    <br><br>
+    <div id="result">Hiển thị kết quả:</div>
+</body>
+</html>
+<script>
+    function check() {
+        let year = +document.getElementById("year").value;
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    document.getElementById("result").innerHTML = year + " Là năm nhuận";
+                } else {
+                    document.getElementById("result").innerHTML = year + " Không là năm nhuận";
+                }
+            } else {
+                document.getElementById("result").innerHTML = year + " Là năm nhuận";
+            }
+        } else {
+            document.getElementById("result").innerHTML = year + " Không là năm nhuận";
+        }     
+    }
+</script>

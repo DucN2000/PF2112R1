@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm ĐH khối D</title>
+</head>
+<body>
+    <input type="number" id="toan" placeholder="Nhập điểm toán">
+    <input type="number" id="van" placeholder="Nhập điểm văn">
+    <input type="number" id="anh" placeholder="Nhập điểm anh">
+    <select name="" id="kv">
+        <option value="1">KV 1</option>
+        <option value="2">KV 2</option>
+        <option value="2NT">KV 2NT</option>
+        <option value="3">KV 3</option>
+    </select>
+    <button onclick="check()">Tính điểm</button>
+    <div id="result">Chỗ hiện kết quả</div>
+</body>
+</html>
+
+<script check()>
+    let toan = +document.getElementById("toan").value;
+    let van = +document.getElementById("van").value;
+    let anh = +document.getElementById("anh").value;
+    let kv = document.getElementById("kv").value;
+    let tong = toan + van + anh;
+    switch(kv) {
+        case "1":
+            tong += 0.75;
+            break;
+        case "2NT":
+            tong += 0.5;
+            break;
+        case "2":
+            tong += 0.25;
+        case "3":
+            break;
+    }
+    document.getElementById("result").innerHTML = "Điểm ĐH khối D là: " + tong;
+</script>

@@ -7,20 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="border: 1px solid black; height: 500px; width: 500px; background-color: rgb(58, 51, 51);">
-        <img id="tank"
-        src="https://img.pikbest.com/58pic/33/75/07/69t58PIC8xSfv58PICcc5qZMg_PIC2018.png!c1024wm0/compress/true/progressive/true/format/webp/fw/1024"
-        style= "position: relative; top: 50px; left: 0px;"
-        width="25"
-        height="25">
+    <div 
+        style="width: 190px; height: 190px; border: 1px solid black; ; position: relative" id="battleFiled">
+        <div
+        style="top: 19px; left: 0px;width: 19px; height: 19px; background-image: url(https://img.pikbest.com/58pic/33/75/07/69t58PIC8xSfv58PICcc5qZMg_PIC2018.png!c1024wm0/compress/true/progressive/true/format/webp/fw/1024);background-size: 100% 100%;position: absolute;"
+        id="tank">
+        </div>
+    
+        <div
+        style="top: 38px; left: 76px;width: 19px; height: 19px; background-image: url(https://cdn.pixabay.com/photo/2018/04/10/10/38/boom-3307008_1280.png);background-size: 100% 100%;position: absolute;"
+        id="boom">
+        </div>
     </div>
 
     <br>
-    <button onclick="top_tank()">top</button>
-    <button onclick="bottom_tank()">bottom</button>
-    <button onclick="left_tank()">left</button>
-    <button onclick="right_tank()">right</button>
+    <button onclick="moveUp()">⬆</button> 
+    <button onclick="moveDown()">⬇</button>
+    <button onclick="moveLeft()">⬅</button>
+    <button onclick="moveRight()">➡</button>
 
-    <script src="tank.js"></script>
+    <script src="tankpro.js"></script>
 </body>
 </html>
