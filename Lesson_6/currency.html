@@ -8,15 +8,18 @@
 </head>
 <body>
     <h3>Amount</h3>
-    <input type="number" id="num" placeholder="Nhập số tiền">
+    <input type="number" id="Amount" placeholder="Nhập số tiền">
     <h3>From Currency</h3>
-    <select name="" id="fromcur">
+    <select name="" id="From">
         <option value="usd">USD</option>
+        <option value="vnd">Viet Nam</option>
         <option value="eu">EURO</option>
+
     </select>
     <h3>To Currency</h3>
-    <select name="" id="tocur">
+    <select name="" id="To">
         <option value="vnd">Viet Nam</option>
+        <option value="usd">USD</option>
     </select>
     <button onclick="Conv()">Convert</button>
     <br>
@@ -27,8 +30,22 @@
 
 <script>
     function Conv() {
-        let money = document.getElementById("num").value;
-        let result = Number(money) * 23000;
-        document.getElementById("result").innerHTML = result;
+        let Amount = document.getElementById("Amount").value;
+        let FromC = document.getElementById("From").value;
+        let To = document.getElementById("To").value;
+        let Result;
+
+        if (From == "usd" && To == "vnd") {
+            Result = "Result: " + (Amount * 23000) + " Đ"
+        }
+        else if (FromC == "vnd" && To == "usd") {
+            Result = "Result: " + (Amount / 23000) + " $";
+        }
+        else if (FromC == "vnd") {
+            Result = "Result: " + Amount + " Đ"
+        } else {
+            Result = "Result: " + Amount + " $"
+        }
+        document.getElementById("result").innerHTML = Result;
     }
 </script>
